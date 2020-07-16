@@ -1,7 +1,7 @@
 {
   "name": "php-ajax-dischi",
   "version": "1.0.0",
-  "description": "php-google-faq",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "npm run development",
