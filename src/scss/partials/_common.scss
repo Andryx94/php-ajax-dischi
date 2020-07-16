@@ -1,0 +1,44 @@
+/* Generali */
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+/* .classediesempio {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+/* .clearfix:after {
+   content: "";
+   display: table;
+   clear: both;
+ } */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Montserrat', sans-serif; */
+}
+
+h1 {
+  color: red;
+}
+/* fine generali */
+
+/* versione mobile */
+@media all and (max-width: 767px) {
+}
+/* fine versione mobile */
+
+/* versione tablet */
+@media all and (min-width: 768px) and (max-width:991px){
+}
+/* fine versione tablet  */
+
+/* versione desktop */
+@media all and (min-width: 992px){
+}
+/* fine versione desktop */
