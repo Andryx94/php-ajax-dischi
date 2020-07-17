@@ -1,0 +1,16 @@
+main {
+  height: calc(100vh - 60px);
+  width: 100%;
+  padding-top: 30px;
+  background-color: #1e2d3b;
+  text-align: center;
+  .disc {
+    width: 150px;
+    background-color: #2e3a46;
+    margin: 10px 20px;
+    padding: 15px;
+    img {
+      width: 120px;
+    }
+  }
+}

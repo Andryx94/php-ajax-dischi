@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8">
     <title>Dischi</title>
-    <link rel="stylesheet" href="dist/style.css">
+    <link rel="stylesheet" href="dist/app.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:200,600,400,800" rel="stylesheet">
   </head>
   <body>
@@ -36,5 +36,20 @@
       </div>
     </main>
     <!-- fine main -->
+
+    <!-- Template Handlebars -->
+    <script id="template" type="text/x-handlebars-template">
+      <div class="disc">
+        <ul>
+          <li><img src="{{poster}}" alt=""> </li>
+          <li><h3>{{title}}</h3></li>
+          <li><p>{{author}}</p></li>
+          <li><p>{{year}}</p></li>
+        </ul>
+      </div>
+    </script>
+    <!-- fine template handlebars -->
+
+    <script type="text/javascript" src="dist/app.js"></script>
   </body>
 </html>
