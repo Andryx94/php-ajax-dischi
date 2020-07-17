@@ -16092,7 +16092,14 @@ var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"
 var Handlebars = __webpack_require__(/*! handlebars */ "./node_modules/handlebars/dist/cjs/handlebars.js");
 
 $(document).ready(function () {
-  addAlbum();
+  addAlbum(); //avvio funzione al cambio opzione select
+
+  $(".select").change(function () {
+    var genere = $(this).val();
+    console.log(genere);
+    $(".disc-list .disc").hide();
+    $(".disc-list .disc." + genere).show();
+  });
 });
 
 function addAlbum() {
@@ -16100,17 +16107,12 @@ function addAlbum() {
     url: "http://localhost:8888/php-ajax-dischi/server.php",
     method: "GET",
     success: function success(data) {
+      var source = $("#template").html();
+      var template = Handlebars.compile(source);
+
       for (var i = 0; i < data.length; i++) {
-        var source = $("#template").html();
-        var template = Handlebars.compile(source);
-        var context = {
-          poster: data[i].poster,
-          title: data[i].title,
-          author: data[i].author,
-          year: data[i].year
-        };
-        var html = template(context);
-        $("main .container").append(html);
+        var html = template(data[i]);
+        $(".disc-list").append(html);
       }
     },
     error: function error() {

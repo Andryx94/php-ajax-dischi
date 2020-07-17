@@ -24,44 +24,58 @@ p {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.container {
-  width: 800px;
-  margin: 0 auto;
-}
-
-.flex {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
 header {
   height: 60px;
-  width: 100%;
   background-color: #2e3a46;
 }
 
-header img {
+header .header-container {
+  width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+header .header-container .logo img {
   width: 40px;
-  padding: 10px 0;
+}
+
+header .header-container .music-select select {
+  outline: 0;
+  border-radius: 10px;
+  padding: 5px;
+  color: white;
+  background-color: #1e2d3b;
+  border: 1px solid #1e2d3b;
 }
 
 main {
   height: calc(100vh - 60px);
-  width: 100%;
   padding-top: 30px;
   background-color: #1e2d3b;
   text-align: center;
 }
 
-main .disc {
+main .disc-list {
+  width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+main .disc-list .disc {
   width: 150px;
   background-color: #2e3a46;
   margin: 10px 20px;
   padding: 15px;
 }
 
-main .disc img {
+main .disc-list .disc img {
   width: 120px;
 }
 

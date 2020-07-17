@@ -12,19 +12,30 @@
   <body>
     <!-- HEADER -->
     <header>
-      <div class="container">
-        <img src="img/spotify.png" alt="">
+      <div class="header-container">
+        <div class="logo">
+          <img src="img/spotify.png" alt="">
+        </div>
+
+        <div class="music-select">
+          <select class="select" name="">
+            <option value="disc">Genere</option>
+            <option value="Rock">Rock</option>
+            <option value="Pop">Pop</option>
+            <option value="Jazz">Jazz</option>
+          </select>
+        </div>
       </div>
     </header>
     <!-- fine header -->
 
     <!-- MAIN -->
     <main>
-      <div class="container flex">
+      <div class="disc-list">
 
         <!-- ciclo foreach per stampare tutti i dischi -->
         <?php foreach ($database as $database_item){ ?>
-          <div class="disc">
+          <div class="disc <?php echo ($database_item["genre"]) ?>">
             <ul>
               <li><img src="<?php echo ($database_item["poster"]) ?>" alt=""> </li>
               <li><h3><?php echo($database_item["title"]) ?></h3></li>
@@ -39,7 +50,7 @@
 
     <!-- Template Handlebars -->
     <script id="template" type="text/x-handlebars-template">
-      <div class="disc">
+      <div class="disc {{genre}}">
         <ul>
           <li><img src="{{poster}}" alt=""> </li>
           <li><h3>{{title}}</h3></li>

@@ -1,0 +1,10 @@
+@mixin container{
+  width: 800px;
+  margin: 0 auto;
+}
+
+@mixin flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
