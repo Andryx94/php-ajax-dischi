@@ -6,10 +6,21 @@ $(document).ready(function(){
 
   //avvio funzione al cambio opzione select
     $(".select").change(function(){
-      var genere = $(this).val();
-      console.log(genere);
-      $(".disc-list .disc").hide();
-      $(".disc-list .disc." + genere).show();
+      var authorSelect = $(this).val();
+      var author = $(".disc-list .disc .author");
+      var disc = $(".disc-list .disc");
+      disc.hide();
+
+      //scorro tutti gli autori
+      author.each(function() {
+        if ($(this).text() == authorSelect){
+          $(this).parents(".disc").show();
+        }
+
+        else if (authorSelect == "author") {
+          author.parents(".disc").show();
+        }
+      });
     })
 });
 

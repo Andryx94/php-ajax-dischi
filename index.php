@@ -19,10 +19,10 @@
 
         <div class="music-select">
           <select class="select" name="">
-            <option value="disc">Genere</option>
-            <option value="Rock">Rock</option>
-            <option value="Pop">Pop</option>
-            <option value="Jazz">Jazz</option>
+            <option value="author">Artista</option>
+            <?php foreach ($database as $database_item){ ?>
+              <option value="<?php echo($database_item["author"]) ?>"><?php echo($database_item["author"]) ?></option>
+            <?php }; ?>
           </select>
         </div>
       </div>
@@ -35,11 +35,11 @@
 
         <!-- ciclo foreach per stampare tutti i dischi -->
         <?php foreach ($database as $database_item){ ?>
-          <div class="disc <?php echo ($database_item["genre"]) ?>">
+          <div class="disc">
             <ul>
               <li><img src="<?php echo ($database_item["poster"]) ?>" alt=""> </li>
               <li><h3><?php echo($database_item["title"]) ?></h3></li>
-              <li><p><?php echo($database_item["author"]) ?></p></li>
+              <li><p class="author"><?php echo($database_item["author"]) ?></p></li>
               <li><p><?php echo($database_item["year"]) ?></p></li>
             </ul>
           </div>
@@ -50,11 +50,11 @@
 
     <!-- Template Handlebars -->
     <script id="template" type="text/x-handlebars-template">
-      <div class="disc {{genre}}">
+      <div class="disc">
         <ul>
           <li><img src="{{poster}}" alt=""> </li>
           <li><h3>{{title}}</h3></li>
-          <li><p>{{author}}</p></li>
+          <li><p class="author">{{author}}</p></li>
           <li><p>{{year}}</p></li>
         </ul>
       </div>
