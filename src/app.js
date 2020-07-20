@@ -5,25 +5,26 @@ $(document).ready(function(){
   addAlbum();
 
   //avvio funzione al cambio opzione select
-    $(".select").change(function(){
-      var authorSelect = $(this).val();
-      var author = $(".disc-list .disc .author");
-      var disc = $(".disc-list .disc");
-      disc.hide();
+  $(".select").change(function(){
+    var authorSelect = $(this).val();
+    var author = $(".disc-list .disc .author");
+    var disc = $(".disc-list .disc");
+    disc.hide();
 
-      //scorro tutti gli autori
-      author.each(function() {
-        if ($(this).text() == authorSelect){
-          $(this).parents(".disc").show();
-        }
+    //scorro tutti gli autori
+    author.each(function() {
+      if ($(this).text() == authorSelect){
+        $(this).parents(".disc").show();
+      }
 
-        else if (authorSelect == "author") {
-          author.parents(".disc").show();
-        }
-      });
-    })
+      else if (authorSelect == "author") {
+        author.parents(".disc").show();
+      }
+    });
+  })
 });
 
+//FUNZIONE aggiunt album
 function addAlbum(){
   $.ajax(
     {

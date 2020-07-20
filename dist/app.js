@@ -16108,7 +16108,7 @@ $(document).ready(function () {
       }
     });
   });
-});
+}); //FUNZIONE aggiunt album
 
 function addAlbum() {
   $.ajax({
